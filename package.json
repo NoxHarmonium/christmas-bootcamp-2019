@@ -2,8 +2,8 @@
   "name": "christmas-bootcamp-2019",
   "version": "1.0.0",
   "scripts": {
-    "install-server": "cd server && yarn install && yarn build && cd ..",
-    "install-client": "cd client && yarn install && yarn build && cd ..",
+    "install-server": "cd server && yarn install --production=false && yarn build && cd ..",
+    "install-client": "cd client && yarn install --production=false && yarn build && cd ..",
     "postinstall": "yarn install-client && yarn install-server"
   }
 }
