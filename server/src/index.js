@@ -4,9 +4,8 @@ import { cleanEnv, str, num } from "envalid";
 import { BeerModel } from "./schemas/beer.js";
 
 const app = express();
-const port = 3000;
 
-const { DB_PASSWORD, DB_HOST, DB_NAME } = cleanEnv(process.env, {
+const { DB_PASSWORD, DB_HOST, DB_NAME, PORT } = cleanEnv(process.env, {
   DB_PASSWORD: str(),
   DB_HOST: str(),
   DB_NAME: str({ default: "bootcamp" }),
@@ -29,7 +28,7 @@ const start = async () => {
     }
   );
 
-  app.listen(port, () => console.log(`Server listening on port ${port}!`));
+  app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
 };
 
 start();
