@@ -2,8 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import { cleanEnv, str, num } from "envalid";
 import { BeerModel } from "./schemas/beer.js";
+import { join } from "path";
 
 const app = express();
+// const publicPath = join(__dirname, "/../client/build");
+const publicPath = "static";
+
+console.log(`Path to public assets is [${publicPath}]`);
 
 const { DB_PASSWORD, DB_HOST, DB_NAME, PORT } = cleanEnv(process.env, {
   DB_PASSWORD: str(),
@@ -11,6 +16,8 @@ const { DB_PASSWORD, DB_HOST, DB_NAME, PORT } = cleanEnv(process.env, {
   DB_NAME: str({ default: "bootcamp" }),
   PORT: num({ default: 3000 })
 });
+
+app.use(express.static(publicPath));
 
 app.get("/beers", async (req, res) => {
   const beers = await BeerModel.find({});
