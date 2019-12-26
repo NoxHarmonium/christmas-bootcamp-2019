@@ -1,18 +1,11 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-// E.g.
-// {
-//     brewery: "Colangial",
-//     name: "Hazy IPA",
-//     rating: 4.2
-// }
-
-const BeerSchema = new Schema({
+const beerSchema = new Schema({
   brewery: String,
   name: String,
   rating: Number
 });
 
-export const BeerModel = mongoose.model('Beer', BeerSchema);
+export const beerModel = mongoose.model("Beer", beerSchema);

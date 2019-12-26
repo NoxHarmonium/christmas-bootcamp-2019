@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "babel src -d dist",
-    "copy-client-assets": "rimraf build && cp -r ../client/build build",
+    "copy-client-assets": "rimraf build && cp -r ../client/build static",
     "start": "yon build && yon copy-client-assets && yon serve",
     "watch": "nodemon --watch src --watch ../client/build --exec yon start",
     "serve": "node dist/index.js"
