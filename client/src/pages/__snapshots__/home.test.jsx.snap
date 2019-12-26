@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the home page without errors 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <header
+      className="col-12"
+    >
+      <img
+        alt="logo"
+        className="App-logo"
+        src="logo.svg"
+      />
+      <h1>
+        Beer List
+      </h1>
+    </header>
+    <div
+      className="row"
+    >
+      <main
+        className="col-12"
+      >
+        <Connect(BeerList) />
+      </main>
+    </div>
+  </div>
+</div>
+`;
