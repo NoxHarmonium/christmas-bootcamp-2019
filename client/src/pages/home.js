@@ -1,20 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import BeerList from "./Components/BeerList";
+import logo from "../images/logo.svg";
+import "../style/App.css";
+import BeerList from "../components/beer-list";
 
-function App() {
+const Home = () => {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Beer List</h1>
       </header>
-      <main>
+      <main className="container">
         <BeerList />
       </main>
     </div>
   );
-}
+};
 
-export default App;
+export default Home;
