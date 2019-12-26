@@ -4,11 +4,15 @@
 
 The first time you check out the repo (or package.json has changed) you'll need to install dependencies:
 
-  $ yarn
+```bash
+$ yarn
+```
   
 To start the server run:
 
-  $ yarn watch
+```bash
+$ yarn watch
+```
   
 It should start on port 3001
 
@@ -18,8 +22,12 @@ It will automatically restart whenever the code changes.
 
 Build the code first:
 
-  $ yarn build
+```
+$ yarn build
+```
   
 Start the server:
 
-  $ yarn serve
+```
+$ yarn serve
+```
