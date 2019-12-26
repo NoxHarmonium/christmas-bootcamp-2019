@@ -1,9 +1,15 @@
 export class BeerService {
-  constructor(beerModel) {
-    this.beerModel = beerModel;
+  constructor(BeerModel) {
+    this.BeerModel = BeerModel;
   }
 
   async getBeers() {
-    return this.beerModel.find({});
+    return this.BeerModel.find({});
+  }
+
+  async createBeer(beer) {
+    var beerModel = new this.BeerModel(beer);
+    const result = await beerModel.save();
+    return result;
   }
 }

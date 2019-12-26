@@ -8,4 +8,4 @@ const beerSchema = new Schema({
   rating: Number
 });
 
-export const beerModel = mongoose.model("Beer", beerSchema);
+export const BeerModel = mongoose.model("Beer", beerSchema);
