@@ -11,7 +11,7 @@
     "build-for-prod": "if-env NODE_ENV=production && run-s build|| echo 'Will not automatically build components for production. See README.md'",
     "test-server": "cd server && yarn test && cd ..",
     "test-client": "cd client && yarn test && cd ..",
-    "postinstall": "run-p install-client install-server && run-s build-for-prod",
+    "postinstall": "run-s install-client install-server && run-s build-for-prod",
     "start": "run-p start-server start-client",
     "build": "run-s build-client build-client",
     "test": "cross-env CI=true run-p test-client test-server"
