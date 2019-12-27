@@ -8,9 +8,7 @@ export const BeerItem = ({ beer: { brewery, name, rating } }) => (
       <dt>Name</dt>
       <dd>{name}</dd>
       <dt>Rating</dt>
-      <dd>{rating}</dd>  
+      <dd>{rating}</dd>
     </dl>
   </div>
 );
-
-
