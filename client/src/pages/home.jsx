@@ -3,6 +3,7 @@ import logo from "../images/logo.svg";
 import "../style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BeerList from "../components/beer-list";
+import BeerAdd from "../components/beer-add";
 
 const Home = () => {
   return (
@@ -12,11 +13,14 @@ const Home = () => {
           <img src={logo} className="App-logo" alt="logo" />
           <h1>Beer List</h1>
         </header>
-        <div className="row">
-          <main className="col-12">
-            <BeerList />
-          </main>
+      </div>
+      <div className="row">
+        <div className="col-6">
+          <BeerAdd />
         </div>
+        <main className="col-6">
+          <BeerList />
+        </main>
       </div>
     </div>
   );

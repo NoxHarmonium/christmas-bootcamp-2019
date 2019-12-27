@@ -5,6 +5,9 @@ import Loader from "react-loader-spinner";
 import { BeerItem } from "./beer-item";
 import { useEffect } from "react";
 
+
+//my routing will go here 
+
 export const BeerList = ({ beers, error, loading, dispatchFetchBeers }) => {
   useEffect(() => {
     dispatchFetchBeers();
@@ -13,7 +16,6 @@ export const BeerList = ({ beers, error, loading, dispatchFetchBeers }) => {
   if (loading) {
     return <Loader type="ThreeDots" color="#FFFFFF" />;
   }
-  console.log(error);
 
   if (error !== undefined) {
     return <div>Error: {error.message}</div>;
@@ -33,7 +35,6 @@ export const BeerList = ({ beers, error, loading, dispatchFetchBeers }) => {
 
 const mapStateToProps = state => {
   const { beers, error, loading } = state;
-  console.dir({ beers, error, loading });
   return { beers, error, loading };
 };
 
