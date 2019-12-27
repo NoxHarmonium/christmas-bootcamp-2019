@@ -19,15 +19,20 @@ exports[`renders the home page without errors 1`] = `
         Beer List
       </h1>
     </header>
+  </div>
+  <div
+    className="row"
+  >
     <div
-      className="row"
+      className="col-6"
     >
-      <main
-        className="col-12"
-      >
-        <Connect(BeerList) />
-      </main>
+      <Connect(BeerAdd) />
     </div>
+    <main
+      className="col-6"
+    >
+      <Connect(BeerList) />
+    </main>
   </div>
 </div>
 `;
