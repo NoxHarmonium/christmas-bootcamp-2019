@@ -6,4 +6,8 @@ export class BeerApi {
   async getBeers() {
     return this.apiClient.get("/beers");
   }
+  
+  async postBeer(beer) {
+    return this.apiClient.post("/beers", beer);
+  }
 }

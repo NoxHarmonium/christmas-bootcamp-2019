@@ -4,6 +4,12 @@ import {
   FETCH_BEERS_FAILURE
 } from "./actions/fetch-beers";
 
+import {
+  POST_BEER,
+  POST_BEER_SUCCESS,
+  POST_BEER_FAILURE
+} from "./actions/post-beer";
+
 export default (
   state = { error: undefined, beers: undefined, loading: false },
   action
@@ -23,6 +29,21 @@ export default (
     case FETCH_BEERS_FAILURE:
       return {
         beers: undefined,
+        error: action.payload,
+        loading: false
+      };
+    case POST_BEER:
+      return {
+        error: undefined,
+        loading: true
+      };
+    case POST_BEER_SUCCESS:
+      return {
+        error: undefined,
+        loading: false
+      };
+    case POST_BEER_FAILURE:
+      return {
         error: action.payload,
         loading: false
       };
