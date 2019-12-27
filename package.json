@@ -2,11 +2,23 @@
   "name": "christmas-bootcamp-2019",
   "version": "1.0.0",
   "scripts": {
-    "install-server": "cd server && yarn install --production=false && yarn build && cd ..",
-    "install-client": "cd client && yarn install --production=false && yarn build && cd ..",
-    "postinstall": "env && run-p install-client install-server"
+    "install-server": "cd server && yarn install --production=false && cd ..",
+    "install-client": "cd client && yarn install --production=false && cd ..",
+    "start-server": "cd server && yarn start && cd ..",
+    "start-client": "cd client && yarn start && cd ..",
+    "build-server": "cd server && yarn build && cd ..",
+    "build-client": "cd client && yarn build && cd ..",
+    "build-for-prod": "if-env NODE_ENV=production && run-s build|| echo 'Will not automatically build components for production. See README.md'",
+    "test-server": "cd server && yarn test && cd ..",
+    "test-client": "cd client && yarn test && cd ..",
+    "postinstall": "run-p install-client install-server && run-s build-for-prod",
+    "start": "run-p start-server start-client",
+    "build": "run-s build-client build-client",
+    "test": "cross-env CI=true run-p test-client test-server"
   },
   "devDependencies": {
+    "cross-env": "^6.0.3",
+    "if-env": "^1.0.4",
     "npm-run-all": "^4.1.5"
   }
 }
