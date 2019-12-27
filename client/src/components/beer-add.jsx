@@ -10,18 +10,14 @@ export const BeerAdd = ({ dispatchPostBeer }) => {
       const el = e.target;
       const changeState = {
         ...formState,
-        [el.id]: el.type === "numberimport React, { useCallback, useState } from "react";
-        import { postBeerAsync } from "../state/actions/post-beer";
-        import { connect } from "react-redux";" ? el.valueAsNumber : el.value
+        [el.id]: el.type === "number" ? el.valueAsNumber : el.value
       };
       setFormState(changeState);
     },
     [formState, setFormState]
   );
-
   const onSubmit = useCallback(
     e => {
-
       e.preventDefault();
       dispatchPostBeer(formState);
     },
