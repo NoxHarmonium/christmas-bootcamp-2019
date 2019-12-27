@@ -17,7 +17,8 @@
     "copy-client-assets": "rimraf build && cp -r ../client/build static",
     "start": "yon build && yon copy-client-assets && yon serve",
     "watch": "nodemon --watch src --watch ../client/build --exec yon start",
-    "serve": "node dist/index.js"
+    "serve": "node dist/index.js",
+    "test": "echo 'TODO: Write server side tests'"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.7",

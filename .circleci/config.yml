@@ -34,6 +34,4 @@ jobs:
             - server/node_modules
           key: v1-dependencies-{{ checksum "client/package.json" }}-{{ checksum "server/package.json" }}
 
-      # run tests!
-      # TODO
-      #- run: yarn test
+      - run: yarn test
