@@ -11,3 +11,4 @@ export class BeerApi {
     return this.apiClient.post("/beers", beer);
   }
 }
+
