@@ -10,9 +10,6 @@ app.use(express.static("static"));
 app.use(bodyParser.json());
 
 app.get("/beers", async (req, res) => {
-  // TODO: Use this try/catch pattern with the other handlers
-  // It makes sure that if any errors occur they will be logged properly
-  // rather than the request just hanging
   try {
     const beers = await beerService.getBeers();
     res.send({
