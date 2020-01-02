@@ -12,4 +12,9 @@ export class BeerService {
     const result = await beerModel.save();
     return result;
   }
+
+  async editBeer(id, updatedbeer) {
+    const beer = await this.BeerModel.findById(id);
+    return beer.update(updatedbeer);
+  }
 }
